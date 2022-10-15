@@ -19,14 +19,4 @@ class PostagemApiController extends MasterApiController
         $this->request = $request;
     }
 
-    public function autorById($id)
-    {
-    if(!$data = $this->model->with('autor')->find($id)){
-        return response()->json(['error' => 'Nada por aqui, verifique os parâmentros!'], 404);
-    }else{
-
-        return response()->json($data);
-    }
-
-    }
 }

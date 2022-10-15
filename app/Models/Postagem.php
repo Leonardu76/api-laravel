@@ -31,10 +31,6 @@ class Postagem extends Model
     ];
  }
 
- public function autor()
- {
- return $this->belongsTo(Usuario::class, 'id_user', 'id');
- }
 
  public function categoria()
  {

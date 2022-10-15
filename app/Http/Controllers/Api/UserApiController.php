@@ -19,9 +19,9 @@ class UserApiController extends MasterApiController
         $this->request = $request;
     }
     
-    public function postById($id_user)
+    public function postByIdUser($id_user)
     {
-    if(!$data = $this->model->with('categoria')->find($id_user)){
+    if(!$data = $this->model->with('post')->find($id_user)){
         return response()->json(['error' => 'Nada por aqui, verifique os parâmentros!'], 404);
     }else{
 
