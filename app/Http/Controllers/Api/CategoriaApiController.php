@@ -11,6 +11,7 @@ class CategoriaApiController extends MasterApiController
     // protected $upload = 'image';
     // protected $model;
     // protected $path = 'usuarios';
+    protected $data;
 
     public function  __construct(Categoria $cat, Request $request)
     {

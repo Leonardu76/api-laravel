@@ -17,7 +17,7 @@ class MasterApiController extends BaseController
 
     public function index ()
     {
-        $data = $this->model->paginate(20);
+        $data['data'] = $this->model->all();
         return response()->json($data);
     }
 
