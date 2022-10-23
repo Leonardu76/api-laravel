@@ -8,10 +8,9 @@ use App\Models\Categoria;
 
 class CategoriaApiController extends MasterApiController
 {
-    // protected $upload = 'image';
-    // protected $model;
-    // protected $path = 'usuarios';
-    protected $data;
+    protected $upload;
+    protected $model;
+    protected $path;
 
     public function  __construct(Categoria $cat, Request $request)
     {
@@ -21,11 +20,11 @@ class CategoriaApiController extends MasterApiController
     
     public function postByCategoria($id_cat)
     {
-    if(!$data = $this->model->with('categoriaDe')->find($id_cat)){
+    if(!$data = $this->model->with('postagens')->find($id_cat)){
         return response()->json(['error' => 'Nada por aqui, verifique os parâmentros!'], 404);
     }else{
-
-        return response()->json($data);
+        $dado['data'] = $data;
+        return response()->json($dado);
     }
 
     }

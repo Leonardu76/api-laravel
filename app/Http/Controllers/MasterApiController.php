@@ -14,6 +14,7 @@ use Illuminate\Support\Facades\Storage;
 class MasterApiController extends BaseController
 {
     use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
+    // protected $data['data'] = '1';
 
     public function index ()
     {
@@ -41,7 +42,7 @@ class MasterApiController extends BaseController
             }
         }
 
-        if($data = $this->model->create($dataForm)){
+        if($data['data'] = $this->model->create($dataForm)){
             return response()->json(['sucess' => 'Cadastro realizado com sucesso!!']);
 
         }else{
@@ -56,7 +57,7 @@ class MasterApiController extends BaseController
         if(!$data = $this->model->find($id)){
             return response()->json(['error' => 'Nada por aqui, verifique os parâmentros!'], 404);
         }else{
-
+            // $dado['data'] = $data;
             return response()->json($data);
         }
     }

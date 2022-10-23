@@ -20,7 +20,7 @@ class Categoria extends Model
  }
 
 
- public function categoriaDe()
+ public function postagens()
  {
  return $this->hasMany(Postagem::class, 'id_cat', 'id');
  }

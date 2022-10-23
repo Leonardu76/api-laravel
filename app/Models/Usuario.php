@@ -14,17 +14,25 @@ class Usuario extends Model
         'sobrenome',
         'email',
         'senha',
-        'image'
+        'image',
+        'insta',
+        'face',
+        'twitter',
+        'linkdin',
     ];
 
  public function rules()
  {
     return [
         'nome' => 'required',
-        'sobrenome' => 'required',
+        'sobrenome' => 'nullable',
         'email' => 'required|unique:usuarios',
         'senha' => 'required',
-        'image' => 'image'
+        'image' => 'image',
+        'insta' => 'nullable',
+        'face' => 'nullable',
+        'twitter'=> 'nullable',
+        'linkdin'=> 'nullable'
     ];
  }
 
