@@ -25,6 +25,7 @@ class Postagem extends Model
         'id_user' => 'required',
         'id_cat' => 'required',
         'titulo' => 'required',
+        'subtitulo' => 'required',
         'autor' => 'required',
         'conteudo' => 'required',
         'image' => 'image',

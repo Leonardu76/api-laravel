@@ -29,6 +29,7 @@ class Usuario extends Model
         'email' => 'required|unique:usuarios',
         'senha' => 'required',
         'image' => 'image',
+        'sobre' => 'nullable',
         'insta' => 'nullable',
         'face' => 'nullable',
         'twitter'=> 'nullable',
@@ -44,7 +45,7 @@ class Usuario extends Model
 
  public function post()
  {
- return $this->hasOne(Postagem::class, 'id_user', 'id');
+ return $this->hasMany(Postagem::class, 'id_user', 'id');
  }
  
 }

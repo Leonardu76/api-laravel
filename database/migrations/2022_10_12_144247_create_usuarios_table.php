@@ -20,6 +20,7 @@ class CreateUsuariosTable extends Migration
             $table->string('email', 50)->unique();
             $table->string('senha');
             $table->string('image')->nullable();
+            $table->string('sobre', 30)->nullable();
             $table->string('insta')->nullable();;
             $table->string('face')->nullable();;
             $table->string('twitter')->nullable();;

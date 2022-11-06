@@ -18,8 +18,9 @@ class CreatePostagemsTable extends Migration
             $table->integer('id_cat')->unsigned();
             $table->integer('id_user')->unsigned();
             $table->string('titulo', 50);
+            $table->string('subtitulo', 20)->nullable();
             $table->string('autor', 20);
-            $table->text('conteudo');
+            $table->text('conteudo')->nullable();
             $table->string('image')->nullable();
             $table->timestamps();
 
