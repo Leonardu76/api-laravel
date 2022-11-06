@@ -15,6 +15,7 @@ class Usuario extends Model
         'email',
         'senha',
         'image',
+        'sobre',
         'insta',
         'face',
         'twitter',

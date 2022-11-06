@@ -15,6 +15,7 @@ class Postagem extends Model
         'id_cat',
         'titulo',
         'autor',
+        'subtitulo',
         'conteudo',
         'image',
     ];
